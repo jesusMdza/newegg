@@ -1,13 +1,15 @@
 import React from 'react';
+import './MainNav.scss';
 
 const MainNav = () => {
   return (
-    <div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Products</li>
-      </ul>
+    <div className="nav">
+      <div className="logo">NCASE</div>
+      <div className="link-container">
+        <a className="link">Search</a>
+        <a className="link">Products</a>
+      </div>
+      <div className="drawer"></div>
     </div>
   );
 };
