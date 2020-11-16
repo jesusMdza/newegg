@@ -5,9 +5,11 @@ import MainNav from './Components/MainNav/MainNav';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <MainNav />
-      <Home />
+      <div className="container">
+        <Home />
+      </div>
     </div>
   );
 }
