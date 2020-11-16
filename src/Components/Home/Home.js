@@ -4,12 +4,18 @@ import { Image, Button } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <div clasName={`${styles.contentContainer}`}>
-      <div className={`${styles.imageContainer}`}>
-        <Image src="/images/ryzen.jpg" fluid />
-        <div className={`${styles.titleHeading}`}>
-          <h1>RYZEN 5 3600x</h1>
-          <Button className="text-uppercase">Order Now</Button>
+    <div className={`${styles.home}`}>
+      <div className={`position-relative`}>
+        <Image className={`${styles.image}`} src="/images/ryzen.jpg" fluid />
+        <div className="container">
+          <div className={`position-absolute ${styles.imageContainer}`}>
+            <div className={`${styles.titleHeading}`}>
+              <h1>Ryzen 5 3600x</h1>
+              <Button className={`${styles.buttonPrimary} text-uppercase`}>
+                Order Now
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -4,8 +4,8 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const MainNav = () => {
   return (
-    <Navbar className="container" expand="lg">
-      <Navbar.Brand href="/home">React-Bootstrap</Navbar.Brand>
+    <Navbar className="container" expand="xl">
+      <Navbar.Brand href="/home">newegg</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
