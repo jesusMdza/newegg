@@ -10,7 +10,7 @@ const Home = () => {
         <div className="container">
           <div className={`position-absolute ${styles.imageContainer}`}>
             <div className={`${styles.titleHeading}`}>
-              <h1>Ryzen 5 3600x</h1>
+              <h1>Ryzen 5 3600</h1>
               <Button className={`${styles.buttonPrimary} text-uppercase`}>
                 Order Now
               </Button>
