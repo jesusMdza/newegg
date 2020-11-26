@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import { Image, Button } from 'react-bootstrap';
+import ContainerGrid from '../ContainerGrid/ContainerGrid';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ContainerGrid />
     </div>
   );
 };
