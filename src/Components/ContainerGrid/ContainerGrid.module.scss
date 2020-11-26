@@ -1,0 +1,18 @@
+.grid {
+  .categoryColumn {
+    border-right: 1px solid rgb(223, 223, 223);
+    border-bottom: 1px solid rgb(223, 223, 223);
+    background: rgb(241, 241, 241);
+  }
+
+  .categoryHeading {
+    font-weight: 700;
+    color: rgb(24, 24, 24);
+  }
+
+  .categoryText {
+    font-size: 0.8125em;
+    font-weight: 400;
+    color: rgb(95, 95 , 95);
+  }
+}

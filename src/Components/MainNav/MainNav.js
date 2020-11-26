@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const MainNav = () => {
   return (
-    <Navbar className="container" expand="xl">
+    <Navbar className={`container ${styles.nav}`} expand="xl">
       <Navbar.Brand href="/home">newegg</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
