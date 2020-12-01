@@ -1,3 +1,39 @@
-.nav {
-  background: rgb(241, 241, 241);
+.mainNav {
+  a {
+    padding: 0;
+  }
+
+  .nav {
+    background: rgb(241, 241, 241);
+    padding: 22px 0;
+  }
+
+  .link:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .cartIcon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .cartAmount {
+    font-size: .875em;
+    font-weight: 700;
+    color: #000;
+    position: absolute;
+    left: 21px;
+    top: 9px;
+  }
 }

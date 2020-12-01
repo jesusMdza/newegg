@@ -4,16 +4,18 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const MainNav = () => {
   return (
-    <Navbar className={`container ${styles.nav}`} expand="xl">
-      <Navbar.Brand href="/home">newegg</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
+    <div className={styles.mainNav}>
+      <Navbar className={`container ${styles.nav}`} expand="xl">
+        <Navbar.Brand href="/home">newegg</Navbar.Brand>
+        <Nav className="ml-auto align-items-center">
+          <Nav.Link className={`${styles.link} ${styles.cart}`} href="/cart">
+            <img className={styles.cartIcon} src="/images/cart_bag.svg" />
+            <span className={styles.cartAmount}>0</span>
+          </Nav.Link>
+          <img className={styles.hamburger} src="/images/hamburger.svg" />
         </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      </Navbar>
+    </div>
   );
 };
 

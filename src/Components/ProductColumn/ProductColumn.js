@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Column.module.scss';
+import styles from './ProductColumn.module.scss';
 
-const Column = ({ src, title, price }) => {
+const ProductColumn = ({ src, title, price }) => {
   return (
     <div className={`${styles.column}`}>
       <div className={`${styles.block}`}>
@@ -22,4 +22,4 @@ const Column = ({ src, title, price }) => {
   );
 };
 
-export default Column;
+export default ProductColumn;

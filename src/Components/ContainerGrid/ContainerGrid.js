@@ -1,5 +1,5 @@
 import React from 'react';
-import Column from '../Column/Column';
+import ProductColumn from '../ProductColumn/ProductColumn';
 import styles from './ContainerGrid.module.scss';
 
 const ContainerGrid = () => {
@@ -72,7 +72,7 @@ const ContainerGrid = () => {
       </div>
       {fakeData.map((product) => {
         return (
-          <Column
+          <ProductColumn
             src={product.src}
             title={product.title}
             price={product.price}
