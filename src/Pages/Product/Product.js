@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from 'Products.module.scss';
+import styles from './Product.module.scss';
 
-const Products = ({ src, title, price, colors }) => {
+const Product = ({ src, title, price }) => {
   return (
-    <div className="">
+    <div className={styles.product}>
       <div className={styles.productLeft}>
         <img src={src} />
       </div>
@@ -58,4 +58,4 @@ const Products = ({ src, title, price, colors }) => {
   );
 };
 
-export default Products;
+export default Product;

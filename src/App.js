@@ -4,13 +4,17 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Home from './Components/Home/Home';
 import MainNav from './Components/MainNav/MainNav';
+import Product from './Pages/Product/Product';
 
 function App() {
   return (
     <>
       <Router>
         <MainNav />
-        <Route path="/" render={() => <Home />} />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/products/:id" render={() => <Product />} />
+        </Switch>
       </Router>
     </>
   );

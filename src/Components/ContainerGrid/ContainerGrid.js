@@ -70,12 +70,13 @@ const ContainerGrid = () => {
         </h2>
         <span className={`${styles.categoryText}`}>Shop Now</span>
       </div>
-      {fakeData.map((product) => {
+      {fakeData.map((product, i) => {
         return (
           <ProductColumn
             src={product.src}
             title={product.title}
             price={product.price}
+            index={i}
           />
         );
       })}
