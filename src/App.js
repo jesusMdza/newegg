@@ -1,23 +1,85 @@
+import React from 'react';
 import './App.css';
-import './App.module.scss';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Home from './Components/Home/Home';
 import MainNav from './Components/MainNav/MainNav';
-import Product from './Pages/Product/Product';
+import Products from './Pages/Products/Products';
+import Context from './Context/Context';
 
-function App() {
+const fakeData = [
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: true,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: true,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+  {
+    src: '/images/montec_air_900.jpg',
+    title: 'Montech Air 900 Mesh ATX Mid-Tower PC Gaming Case',
+    price: 62,
+    isInStock: false,
+    category: 'ATX Cases',
+  },
+];
+
+const App = () => {
   return (
     <>
       <Router>
         <MainNav />
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/products/:id" render={() => <Product />} />
+          <Context.Provider value={{ data: fakeData }}>
+            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/products/:id" render={() => <Products />} />
+          </Context.Provider>
         </Switch>
       </Router>
     </>
   );
-}
+};
 
 export default App;

@@ -1,13 +1,14 @@
-import React from 'react';
-import styles from './Product.module.scss';
+import React, { useContext } from 'react';
+import styles from './Products.module.scss';
 
-const Product = ({ src, title, price }) => {
+const Products = ({ src, title, price }) => {
   return (
-    <div className={styles.product}>
-      <div className={styles.productLeft}>
+    <div className={`d-flex ${styles.product}`}>
+      <div className={styles.columnLeft}>
+        <div className={styles.supposedImage}></div>
         <img src={src} />
       </div>
-      <div className={styles.productRight}>
+      <div className={styles.columnRight}>
         <h1>{title}</h1>
         <h2>${price}</h2>
         <div className={styles.colors}>
@@ -58,4 +59,4 @@ const Product = ({ src, title, price }) => {
   );
 };
 
-export default Product;
+export default Products;
