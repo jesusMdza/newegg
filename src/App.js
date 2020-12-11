@@ -74,7 +74,11 @@ const App = () => {
         <Switch>
           <Context.Provider value={{ data: fakeData }}>
             <Route exact path="/" render={() => <Home />} />
-            <Route exact path="/products/:id" render={() => <Products />} />
+            <Route
+              exact
+              path="/products/:id"
+              render={({ match }) => <Products match={match} />}
+            />
           </Context.Provider>
         </Switch>
       </Router>

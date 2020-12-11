@@ -1,8 +1,30 @@
 .product {
-  .supposedImage {
-    width: 500px;
-    height: 500px;
-    background: gray;
+  h1 {
+    font-size: 2.25em;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h5 {
+    font-weight: 700;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(17, 17, 17);
+    border: none;
+    padding: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: .8px;
   }
 
   .columnLeft {
@@ -13,5 +35,19 @@
   .columnRight {
     width: 50%;
     padding: 4em 6em;
+  }
+
+  .urgent {
+    border: 1px solid #b71c1c;
+  }
+
+  .warningIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .warningBar {
+    width: 130px;
+    background: #b71c1c;
   }
 }

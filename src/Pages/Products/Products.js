@@ -1,17 +1,21 @@
 import React, { useContext } from 'react';
 import styles from './Products.module.scss';
+import Context from '../../Context/Context';
 
-const Products = ({ src, title, price }) => {
+const Products = ({ match }) => {
+  const { data } = useContext(Context);
+  const product = data.find((object, index) => index == match.params.id);
+
   return (
     <div className={`d-flex ${styles.product}`}>
       <div className={styles.columnLeft}>
-        <div className={styles.supposedImage}></div>
-        <img src={src} />
+        <img src={product.src} />
       </div>
       <div className={styles.columnRight}>
-        <h1>{title}</h1>
-        <h2>${price}</h2>
+        <h1 className="mb-4">{product.title}</h1>
+        <h2 className="mb-4">${product.price}</h2>
         <div className={styles.colors}>
+          <h5>Color</h5>
           <div>
             <h3 className={styles.subtitle}></h3>
             <div className={styles.someColor}></div>
@@ -21,39 +25,43 @@ const Products = ({ src, title, price }) => {
           <div className></div>
         </div>
         <div className={styles.submit}>
-          <div className={styles.quantity}>1</div>
-          <button className={styles.submit}>Add To Cart</button>
-        </div>
-        <div className={styles.urgent}>
-          <div>!</div>
-          <p>
-            Due to reduced flights worldwide as a result of COVID-19 it's not
-            possible to ship air mail to many countries from Taiwan. In
-            addition, shipping and customs processing may be significantly
-            delayed to the countries we can ship to.
-            <br /> 10/29 update: Taiwan Post reports that air mail to France,
-            UK, and Malaysia may be subject to extended delay due to COVID.
-            <br />
-            Currently we're only able to ship to the following countries:
-          </p>
-
-          <p>North America:</p>
-          <ul>
-            <li>Canada (EMS only)</li>
-            <li>United States (excluding Alaska, Hawaii, and Guam)</li>
-          </ul>
-
-          <p>Europe</p>
-          <ul>
-            <li>Belgium (EMS only)</li>
-            <li>...</li>
-          </ul>
+          <button className={`w-100 ${styles.submit}`}>Add To Cart</button>
         </div>
         <div className={styles.moreInfo}>
           <h3 className={styles.subtitle}>Stock Notification</h3>
           <span className={styles.subtext}></span>
         </div>
-        <div className={styles.description}></div>
+        <div className={`d-flex ${styles.urgent}`}>
+          <div className={`d-flex justify-content-center ${styles.warningBar}`}>
+            <img
+              className={styles.warningIcon}
+              src="/icons/warning.svg"
+              alt="warning-label"
+            />
+          </div>
+          <div className={`p-2`}>
+            <p>
+              Due to reduced flights worldwide as a result of COVID-19 it's not
+              possible to ship air mail to many countries from Taiwan. In
+              addition, shipping and customs processing may be significantly
+              delayed to the countries we can ship to.
+            </p>
+            <p>Currently we're only able to ship to the following countries:</p>
+
+            <p>North America:</p>
+            <ul>
+              <li>Canada (EMS only)</li>
+              <li>United States (excluding Alaska, Hawaii, and Guam)</li>
+            </ul>
+
+            <p>Europe</p>
+            <ul>
+              <li>Belgium (EMS only)</li>
+              <li>...</li>
+            </ul>
+            <div className={styles.description}></div>
+          </div>
+        </div>
       </div>
     </div>
   );
