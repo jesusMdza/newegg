@@ -4,6 +4,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Home from './Components/Home/Home';
 import MainNav from './Components/MainNav/MainNav';
+import Footer from './Components/Footer/Footer';
 import Products from './Pages/Products/Products';
 import Context from './Context/Context';
 
@@ -81,6 +82,7 @@ const App = () => {
             />
           </Context.Provider>
         </Switch>
+        <Footer />
       </Router>
     </>
   );

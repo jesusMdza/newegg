@@ -6,7 +6,7 @@ const MainNav = () => {
   return (
     <div className={styles.mainNav}>
       <Navbar className={`container ${styles.nav}`} expand="xl">
-        <Navbar.Brand href="/home">newegg</Navbar.Brand>
+        <Navbar.Brand href="/">newegg</Navbar.Brand>
         <Nav className="ml-auto align-items-center">
           <Nav.Link className={`${styles.link} ${styles.cart}`} href="/cart">
             <img className={styles.cartIcon} src="/images/cart_bag.svg" />

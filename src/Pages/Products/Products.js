@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import styles from './Products.module.scss';
 import Context from '../../Context/Context';
+import ProductColumn from '../../Components/ProductColumn/ProductColumn';
 import InfoIcon from '../../Components/InfoIcon/InfoIcon';
 
 const Products = ({ match }) => {
   const { data } = useContext(Context);
   const product = data.find((object, index) => index == match.params.id);
+  const suggestedProducts = data.filter((object, index) => index < 4); // only returns the first 4
 
   return (
-    <div className={`d-flex ${styles.product}`}>
+    <div className={`row row-cols-2 m-0 ${styles.product}`}>
       <div className={styles.columnLeft}>
         <img src={product.src} />
       </div>
@@ -105,6 +107,31 @@ const Products = ({ match }) => {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div
+        className={`d-flex flex-column justify-content-center ${styles.suggestedContainer}`}
+      >
+        <div className={`position-relative ${styles.suggestedLeft}`}>
+          <h1 className={styles.suggestedHeader}>
+            You may <br />
+            also like
+          </h1>
+          <div className={` ${styles.miniBottomBorder}`}></div>
+        </div>
+      </div>
+
+      <div className="row row-cols-2 m-0">
+        {suggestedProducts.map((product, i) => {
+          return (
+            <ProductColumn
+              src={product.src}
+              title={product.title}
+              price={product.price}
+              index={i}
+            />
+          );
+        })}
       </div>
     </div>
   );

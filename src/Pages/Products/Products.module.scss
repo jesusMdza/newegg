@@ -129,6 +129,12 @@
     width: 100%;
     border-bottom: 3px solid rgb(223, 223, 223);
   }
+
+  .miniBottomBorder {
+    width: 3em;
+    height: 4px;
+    background: #111;
+  }
   
   .swatch {
     width: 27px;
@@ -141,5 +147,22 @@
       height: 10px;
       background: black;
     }
+  }
+
+  .suggestedContainer {
+    border-top: 1px solid rgb(223, 223, 223);
+
+    h1 {
+      margin-bottom: 1em;
+    }
+  }
+
+  .suggestedLeft {
+    left: 24%;
+    bottom: 3%;
+  }
+
+  .suggestedHeader {
+    font-size: 4.8em;
   }
 }

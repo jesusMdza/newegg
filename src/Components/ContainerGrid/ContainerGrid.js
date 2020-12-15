@@ -7,7 +7,7 @@ const ContainerGrid = () => {
   const { data } = useContext(Context);
 
   return (
-    <div class={`row m-0 row-cols-4 ${styles.grid}`}>
+    <div class={`row row-cols-4 m-0 ${styles.grid}`}>
       <div
         className={`d-flex justify-content-center align-items-center flex-column ${styles.categoryColumn}`}
       >
