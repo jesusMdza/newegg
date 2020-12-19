@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styles from './Products.module.scss';
 import Context from '../../Context/Context';
 import ProductColumn from '../../Components/ProductColumn/ProductColumn';
@@ -9,10 +9,25 @@ const Products = ({ match }) => {
   const product = data.find((object, index) => index == match.params.id);
   const suggestedProducts = data.filter((object, index) => index < 4); // only returns the first 4
 
+  const [isFixed, setIsFixed] = useState(true);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.scrollY > 745) setIsFixed(false);
+      else setIsFixed(true);
+    };
+  });
+
   return (
     <div className={`row row-cols-2 m-0 ${styles.product}`}>
-      <div className={styles.columnLeft}>
-        <img src={product.src} />
+      <div
+        className={`d-flex flex-column justify-content-between ${styles.columnLeft}`}
+      >
+        <img
+          className={isFixed ? 'position-fixed' : 'invisible'}
+          src={product.src}
+        />
+        <img className={isFixed ? 'invisible' : 'visible'} src={product.src} />
       </div>
       <div className={styles.columnRight}>
         <h1>{product.title}</h1>

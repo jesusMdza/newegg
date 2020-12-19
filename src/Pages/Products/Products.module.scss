@@ -67,6 +67,14 @@
     border-right: 1px solid rgb(223, 223, 223);  
   }
 
+  .columnLeft img:first-child {
+    width: 50%;
+  }
+
+  // .columnLeft img:last-child {
+  //   width: 100%;
+  // }
+
   .columnRight {
     width: 50%;
     padding: 4em 9em;
